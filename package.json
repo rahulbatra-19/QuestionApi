@@ -1,0 +1,19 @@
+{
+  "name": "apiapp",
+  "version": "1.0.0",
+  "description": "\"An api based app for voting on questions\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "APi"
+  ],
+  "author": "Rahul Batra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.4.1"
+  }
+}
