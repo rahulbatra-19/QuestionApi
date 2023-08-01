@@ -1,5 +1,6 @@
 const Question = require('../models/Question');
 
+// For creating a question
 module.exports.create = async function (req, res) {
     try {
         let { title } = req.body;
@@ -14,6 +15,7 @@ module.exports.create = async function (req, res) {
 
 }
 
+// for showing question and there options
 module.exports.index = async function (req, res) {
     try {
         let questions = await Question.find({});
@@ -44,6 +46,7 @@ module.exports.index = async function (req, res) {
     }
 }
 
+// for deleting a question
 module.exports.destroy = async function (req, res) {
     try {
         let question = await Question.findById(req.params.id);
@@ -60,6 +63,7 @@ module.exports.destroy = async function (req, res) {
     }
 }
 
+// for showing a particular question 
 module.exports.viewQuestion = async function (req, res) {
     try {
         const question = await Question.findById(req.params.id);
@@ -84,7 +88,7 @@ module.exports.viewQuestion = async function (req, res) {
       }
 }
 
-
+// for creating a option of questions
 module.exports.createOption = async function(req, res){
 
     try {

@@ -1,7 +1,6 @@
 const Question = require('../models/Question');
 
-
-
+// Adding vote to the options 
 module.exports.addVote = async function (req, res) {
   try {
     let question = await Question.findOne({ 'options._id': req.params.id });
@@ -20,7 +19,7 @@ module.exports.addVote = async function (req, res) {
   }
 };
 
-
+// For destroying a options from question
 module.exports.destroy = async function (req, res) {
   try {
     let question = await Question.findOne({
